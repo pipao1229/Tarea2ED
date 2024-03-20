@@ -62,7 +62,7 @@ public:
 			head->next = head->next->next;
 			delete head->next->previous;
 		}
-		tail->previous = head;
+		current = tail->previous = head;
 		size = 0;
 	}
 	E getElement() {
@@ -116,7 +116,7 @@ public:
 		int index = 0;
 		while (temp != tail) {
 			if (temp->element == element) {
-				return index;  // Retorna la posición del elemento si se encuentra
+				return index;  // Retorna la posiciÃ³n del elemento si se encuentra
 			}
 			temp = temp->next;
 			index++;
